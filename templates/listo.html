@@ -5,11 +5,13 @@
   
 <table class="table">
 	<tr>
+		<th>Owner ID</th>
 		<th>Owner Name</th>
 	</tr>
   
     {% for o in ListofOwners  %}
     <tr>
+				<td>{{ o.id }}</td>
 				<td>{{ o.name }}</td>
 	</tr>
     {% endfor %}
