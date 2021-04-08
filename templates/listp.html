@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<title>List Puppy</title>
+<div class="jumbotron">
+  <h1>Here is a list of all available puppies.</h1>
+  
+<table class="table">
+	<tr>
+		<th>Puppy ID</th>
+		<th>Puppy Name</th>
+		<th>Age</th>
+		<th>Spots</th>
+		<th>Robot</th>
+	</tr>
+  
+    {% for pup in ListofPuppies  %}
+	<tr>
+				<td>{{ pup.id }}</td>
+				<td>{{ pup.name }}</td>
+				<td>{{ pup.age }}</td>
+				<td>{{ pup.spots }}</td>
+				<td>{{ pup.robot }}</td>
+	</tr>
+   
+    {% endfor %}
+ </table>
+
+</div>
+{% endblock %}

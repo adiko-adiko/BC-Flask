@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<title> Add a Puppy</title>
+<div class="jumbotron">
+	<h1>Add a new puppy</h1>
+	<p>Fill out the form below:</p>
+	<form method="POST">
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      {{ form.name.label }} {{ form.name() }}<br>
+	  {{ form.age.label }} {{ form.age() }}<br>
+	  {{ form.spots.label }} {{ form.spots() }}<br>
+	  {{ form.robot.label }} {{ form.robot() }}<br>
+      {{ form.submit() }}
+	</form>
+</div>
+{% endblock %}

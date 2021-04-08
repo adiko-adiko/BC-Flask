@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+
+    <title> Bootcamp Puppy Adoption</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="{{ url_for('index') }}">Home</a>
+      <a class="nav-item nav-link" href="{{ url_for('addpuppy') }}">Add Puppy</a>
+	  <a class="nav-item nav-link" href="{{ url_for('addowner') }}">Add Owner</a>
+      <a class="nav-item nav-link" href="{{ url_for('listpuppy') }}">List Puppy</a>
+	  <a class="nav-item nav-link" href="{{ url_for('listowner') }}">List Owner</a> 
+	  
+      <a class="nav-item nav-link" href="{{ url_for('delpuppy') }}">Delete Puppy</a>
+      
+    </div>
+
+</nav>
+
+    {% block content %}
+<a href="{{ url_for('thankyou') }}">List Puppy</a>
+    {% endblock %}
+  </body>
+</html>
